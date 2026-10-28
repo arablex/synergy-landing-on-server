@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WebStart — лендинги для малого бизнеса: быстро, адаптивно, с заявками на почту.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%232f6bff%27/%3E%3Ctext x=%2716%27 y=%2723%27 font-size=%2720%27 font-family=%27Arial%27 font-weight=%27bold%27 text-anchor=%27middle%27 fill=%27white%27%3EW%3C/text%3E%3C/svg%3E">
+  <title>WebStart — лендинги для малого бизнеса</title>
+  <!-- Глобальные и текстовые стили подключены в head, чтобы страница отрисовалась сразу -->
+  <link rel="stylesheet" href="styles/global.css">
+  <link rel="stylesheet" href="styles/text.css">
+</head>
+<body>
+  <!-- Блочные стили подключены внутри body: при медленном интернете сначала загрузится разметка -->
+  <link rel="stylesheet" href="styles/block.css">
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top">Web<span>Start</span></a>
+      <nav class="nav" id="nav" aria-label="Основное меню">
+        <a href="#services">Услуги</a>
+        <a href="#steps">Как работаем</a>
+        <a href="#faq">Вопросы</a>
+        <a href="#contact">Контакты</a>
+      </nav>
+      <button class="btn btn--small js-open-modal" type="button">Оставить заявку</button>
+      <button class="burger" id="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow">Студия лендингов</p>
+          <h1>Лендинг, который приносит заявки, за 5 дней</h1>
+          <p class="lead">Делаем лёгкие адаптивные страницы без лишних библиотек: быстро открываются,
+            хорошо смотрятся на телефоне и сразу готовы к размещению на вашем сервере.</p>
+          <div class="hero__actions">
+            <button class="btn js-open-modal" type="button">Получить расчёт</button>
+            <a class="btn btn--ghost" href="#services">Что входит</a>
+          </div>
+        </div>
+        <ul class="stats">
+          <li><b class="counter" data-target="120">0</b><span>сайтов запущено</span></li>
+          <li><b class="counter" data-target="5">0</b><span>дней на запуск</span></li>
+          <li><b class="counter" data-target="98">0</b><span>% довольных клиентов</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <h2>Что вы получаете</h2>
+        <div class="cards">
+          <article class="card">
+            <div class="card__icon">01</div>
+            <h3>Дизайн по макету</h3>
+            <p>Верстаем точно по макету из Figma: шрифты, отступы и цвета совпадают с дизайном.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">02</div>
+            <h3>Адаптивная вёрстка</h3>
+            <p>Страница одинаково удобна на компьютере, планшете и телефоне, без горизонтальной прокрутки.</p>
+          </article>
+          <article class="card">
+            <div class="card__icon">03</div>
+            <h3>Размещение на сервере</h3>
+            <p>Настраиваем Nginx и HTTPS, загружаем сайт на хостинг и проверяем, что он доступен из интернета.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="steps">
+      <div class="container">
+        <h2>Как мы работаем</h2>
+        <ol class="steps">
+          <li><b>Бриф.</b> Узнаём задачу, аудиторию и пожелания к странице.</li>
+          <li><b>Макет.</b> Согласовываем дизайн и тексты.</li>
+          <li><b>Вёрстка.</b> Делаем страницу, подключаем форму заявок.</li>
+          <li><b>Запуск.</b> Размещаем на сервере и передаём доступы.</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container container--narrow">
+        <h2>Частые вопросы</h2>
+        <div class="faq">
+          <div class="faq__item">
+            <button class="faq__question" type="button" aria-expanded="false">Сколько стоит лендинг?</button>
+            <div class="faq__answer"><p>От 30 000 ₽ в зависимости от числа блоков. Точную цену назовём после короткого брифа.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" type="button" aria-expanded="false">Нужен ли мне свой сервер?</button>
+            <div class="faq__answer"><p>Можно использовать ваш хостинг или VPS. Если сервера нет, подскажем, какой выбрать, и поможем с настройкой.</p></div>
+          </div>
+          <div class="faq__item">
+            <button class="faq__question" type="button" aria-expanded="false">Можно ли потом править сайт самому?</button>
+            <div class="faq__answer"><p>Да. Код простой: HTML, CSS и немного JavaScript, без сборщиков и фреймворков. Передаём исходники и инструкцию.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="contact">
+      <div class="container container--narrow">
+        <h2>Напишите нам</h2>
+        <p class="section__lead">Оставьте сообщение, и мы ответим в течение рабочего дня.</p>
+        <form class="form" id="contact-form" novalidate>
+          <label class="field">
+            <span>Имя</span>
+            <input type="text" name="name" placeholder="Как к вам обращаться" autocomplete="name">
+            <small class="field__error"></small>
+          </label>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" name="email" placeholder="name@example.com" autocomplete="email">
+            <small class="field__error"></small>
+          </label>
+          <label class="field">
+            <span>Сообщение</span>
+            <textarea name="message" rows="4" placeholder="Коротко опишите задачу"></textarea>
+            <small class="field__error"></small>
+          </label>
+          <button class="btn" type="submit">Отправить</button>
+          <p class="form__status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span>© 2026 WebStart. Учебный проект.</span>
+      <a href="#top" class="to-top" id="to-top">Наверх ↑</a>
+    </div>
+  </footer>
+
+  <!-- Контейнер модального окна и само модальное окно -->
+  <div class="modal-overlay" id="modal-overlay" hidden>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" id="modal-close" type="button" aria-label="Закрыть окно">×</button>
+      <h3 id="modal-title">Оставить заявку</h3>
+      <p>Укажите телефон, и мы перезвоним в течение 15 минут в рабочее время.</p>
+      <form class="form" id="modal-form" novalidate>
+        <label class="field">
+          <span>Телефон</span>
+          <input type="tel" name="phone" placeholder="+7 900 000-00-00" autocomplete="tel">
+          <small class="field__error"></small>
+        </label>
+        <button class="btn" type="submit">Жду звонка</button>
+        <p class="form__status" id="modal-status" role="status"></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Скрипты — в конце body: браузер сначала разберёт и покажет разметку,
+       а JS загрузится после, и DOM-элементы к этому моменту уже существуют -->
+  <script src="scripts/main.js"></script>
+</body>
+</html>

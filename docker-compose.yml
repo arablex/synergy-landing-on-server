@@ -1,0 +1,9 @@
+# Локальная проверка лендинга в nginx-контейнере (то же, что будет на сервере).
+# Запуск: docker compose up -d   ->   http://localhost:4812
+services:
+  landing:
+    image: nginx:alpine
+    ports:
+      - "4812:80"
+    volumes:
+      - ./site:/usr/share/nginx/html:ro
